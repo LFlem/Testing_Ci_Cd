@@ -28,4 +28,4 @@ const getUsername = (user: User): string => {
   return user.name;
 };
 
-console.log(getUsername(user));
+console.log(getUsername(user)); 
