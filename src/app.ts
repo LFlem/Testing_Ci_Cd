@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
                     <link rel="stylesheet" href="/public/css/styles.css"/>
                 </head>
                 <div class="app__message">
-                    <h1>Hello World</h1>
+                    <h1>Hello World.</h1>
                 </div>
             </html>
         `;
