@@ -4,14 +4,14 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon ./dist/app.js",
-    "sass:watch": "sass --watch ./src/styles:./public/css",
     "start": "node ./dist/app.js",
     "ts:watch": "tsc --watch",
     "prettier:fix": "prettier --write ./src/**/*.ts",
     "prettier:check": "prettier --check ./src/**/*.ts",
     "lint": "eslint src --ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && npm run sass:watch"
+    "build:ts": "tsc",
+    "build": "npm run build:ts && npm run lint && npm run prettier:check"
     },
   "keywords": [],
   "author": "",

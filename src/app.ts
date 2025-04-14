@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
                 </head>
                 <div class="app__message">
                     <h1>Hello World</h1>
-                </div> 
+                </div>
             </html>
         `;
     res.writeHead(200, { "Content-Type": "text/html" });
