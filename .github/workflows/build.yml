@@ -24,7 +24,7 @@ jobs:
 
       # Transpilation TypeScript
       - name: Compile TypeScript
-        run: npm run build:ts
+        run: npm run build
         env:
           CI: true
 
