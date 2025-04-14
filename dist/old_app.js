@@ -1,9 +1,10 @@
 "use strict";
 const username = "John Doe";
+const userId = 1;
 const age = 30;
 const isActive = true;
-// const hobbies: string[] = ["reading", "gaming", "hiking"];
 const user = {
+    id: userId,
     name: username,
     age: age,
     isActive: isActive,

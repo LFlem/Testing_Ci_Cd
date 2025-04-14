@@ -5,6 +5,7 @@ interface Product {
 }
 
 interface User {
+  readonly id: number;
   name: string;
   age: number;
   isActive: boolean;
@@ -12,9 +13,12 @@ interface User {
 }
 
 const username: string = "John Doe";
+const userId: number = 1;
 const age: number = 30;
 const isActive: boolean = true;
+
 const user: User = {
+  id: userId,
   name: username,
   age: age,
   isActive: isActive,
@@ -28,4 +32,4 @@ const getUsername = (user: User): string => {
   return user.name;
 };
 
-console.log(getUsername(user)); 
+console.log(getUsername(user));
