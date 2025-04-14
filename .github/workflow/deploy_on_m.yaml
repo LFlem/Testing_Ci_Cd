@@ -1,0 +1,48 @@
+name: Build Pipeline
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Transpilation TypeScript
+      - name: Compile TypeScript
+        run: npm run build:ts
+        env:
+          CI: true
+
+      # Vérification ESLint
+      - name: Run ESLint
+        run: npm run lint
+        env:
+          CI: true
+
+      # Vérification Prettier
+      - name: Check formatting
+        run: npm run prettier:check
+        env:
+          CI: true
+
+      # Les tests
+      # - name: Run tests
+      #   run: npm test
+      #   env:
+      #     CI: true

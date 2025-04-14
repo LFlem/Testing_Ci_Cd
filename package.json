@@ -10,8 +10,9 @@
     "prettier:fix": "prettier --write ./src/**/*.ts",
     "prettier:check": "prettier --check ./src/**/*.ts",
     "lint": "eslint src --ext .ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && npm run sass:watch"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",

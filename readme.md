@@ -19,6 +19,6 @@ https://github.com/ynovzelab/ci-cd-ex1
 // variables d'env => à mettre dans le .gitignore
 // dist => dans le .gitignore
 // Versionner dans un repo : avec deux branches : main et development
-// Mise en ligne sur render 
+// Mise en ligne sur render
 // Déclencher une mise en ligne à l'aide d'un pull request de dev => main
 
