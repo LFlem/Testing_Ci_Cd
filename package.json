@@ -4,7 +4,6 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon ./dist/app.js",
-    "sass:watch": "sass --watch ./src/styles:./public/css",
     "start": "node ./dist/app.js",
     "ts:watch": "tsc --watch",
     "prettier:fix": "prettier --write ./src/**/*.ts",

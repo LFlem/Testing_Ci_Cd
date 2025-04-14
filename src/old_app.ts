@@ -14,7 +14,6 @@ interface User {
 const username: string = "John Doe";
 const age: number = 30;
 const isActive: boolean = true;
-// const hobbies: string[] = ["reading", "gaming", "hiking"];
 const user: User = {
   name: username,
   age: age,
