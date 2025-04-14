@@ -1,33 +1,18 @@
 "use strict";
-let user = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 30,
-    isActive: true,
-    role: "admin",
-    createdAt: new Date(),
+const username = "John Doe";
+const age = 30;
+const isActive = true;
+// const hobbies: string[] = ["reading", "gaming", "hiking"];
+const user = {
+    name: username,
+    age: age,
+    isActive: isActive,
     products: [
-        {
-            id: 1,
-            name: "Product 1",
-            price: 20,
-        },
-        {
-            id: 1,
-            name: "Product 1",
-        },
+        { id: 1, name: "Laptop", price: 1200 },
+        { id: 2, name: "Smartphone", price: 800 },
     ],
 };
-const fullName = (user) => {
-    return `${user.firstName} ${user.lastName}`;
+const getUsername = (user) => {
+    return user.name;
 };
-const fullNameBis = (fistName, lastName) => {
-    console.log(`${fistName} ${lastName}`);
-};
-// const Index = ({lastName, firstName}:IProps) => {
-//     return (
-//         <div>
-//         <p>{ lastName } {firstName} </p>
-//         </div>
-//     )
-// }
+console.log(getUsername(user));

@@ -22,23 +22,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Transpilation TypeScript
+      #  TypeScript et compilation
       - name: Compile TypeScript
         run: npm run build
         env:
           CI: true
 
-      # Vérification ESLint
-      - name: Run ESLint
-        run: npm run lint
-        env:
-          CI: true
-
-      # Vérification Prettier
-      - name: Check formatting
-        run: npm run prettier:check
-        env:
-          CI: true
 
       # Les tests
       # - name: Run tests

@@ -1,5 +1,3 @@
-type Role = "admin" | "user" | "guest";
-
 interface Product {
   readonly id: number;
   name: string;
@@ -7,52 +5,28 @@ interface Product {
 }
 
 interface User {
-  firstName: string;
-  lastName: string;
+  name: string;
   age: number;
-  role: Role;
   isActive: boolean;
-  createdAt?: Date;
   products: Product[];
 }
 
-let user: User = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 30,
-  isActive: true,
-  role: "admin",
-  createdAt: new Date(),
+const username: string = "John Doe";
+const age: number = 30;
+const isActive: boolean = true;
+// const hobbies: string[] = ["reading", "gaming", "hiking"];
+const user: User = {
+  name: username,
+  age: age,
+  isActive: isActive,
   products: [
-    {
-      id: 1,
-      name: "Product 1",
-      price: 20,
-    },
-    {
-      id: 1,
-      name: "Product 1",
-    },
+    { id: 1, name: "Laptop", price: 1200 },
+    { id: 2, name: "Smartphone", price: 800 },
   ],
 };
 
-const fullName = (user: User): string => {
-  return `${user.firstName} ${user.lastName}`;
+const getUsername = (user: User): string => {
+  return user.name;
 };
 
-const fullNameBis = (fistName: string, lastName: string): void => {
-  console.log(`${fistName} ${lastName}`);
-};
-
-interface IProps {
-  lastName: string;
-  firstName: string;
-}
-
-// const Index = ({lastName, firstName}:IProps) => {
-//     return (
-//         <div>
-//         <p>{ lastName } {firstName} </p>
-//         </div>
-//     )
-// }
+console.log(getUsername(user));
