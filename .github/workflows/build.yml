@@ -30,7 +30,7 @@ jobs:
 
 
       # Les tests
-      # - name: Run tests
-      #   run: npm test
-      #   env:
-      #     CI: true
+      - name: Run tests
+        run: npm test
+        env:
+          CI: true
