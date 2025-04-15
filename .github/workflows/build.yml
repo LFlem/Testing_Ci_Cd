@@ -63,7 +63,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/testing_cicd:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/testing_cicd:latest
 
   cd:
     needs: docker
