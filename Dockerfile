@@ -18,4 +18,4 @@ RUN npm run tsc:build
 EXPOSE 3000
 
 # Commande pour démarrer l'application
-CMD ["npm", "dist/src/app.js"]
+CMD ["npm", "dist/app.js"]
