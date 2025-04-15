@@ -12,7 +12,7 @@
     "prettier:fix": "prettier --write ./src/**/*.ts",
     "prettier:check": "prettier --check ./src/**/*.ts",
     "lint": "eslint src --ext .ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "npm run tsc:build && npm run sass:build && npm run prettier:check && npm run lint"
   },
   "keywords": [],
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "http": "^0.0.1-security",
+    "jest": "^29.7.0",
     "sass": "^1.86.3"
   }
 }
