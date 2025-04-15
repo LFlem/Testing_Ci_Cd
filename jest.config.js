@@ -3,9 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
-
-const config: Config = {
+/** @type {import('jest').Config} */
+const config = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -78,7 +77,7 @@ const config: Config = {
   // ],
 
   // An array of file extensions your modules use
-   moduleFileExtensions: [
+  moduleFileExtensions: [
     "js",
   //   "mjs",
   //   "cjs",
@@ -86,8 +85,8 @@ const config: Config = {
     "ts",
   //   "tsx",
   //   "json",
-    // "node"
-   ],
+  //   "node"
+  ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
@@ -175,17 +174,7 @@ const config: Config = {
   // testRunner: "jest-circus/runner",
 
   // A map from regular expressions to paths to transformers
-   transform: {
-    "^.+\\.tsx?$": [
-      "ts-jest",
-      {
-        useESM: true,
-        tsconfig: "tsconfig.json",
-      },
-    ],
-
-   }
-   ,
+  // transform: undefined,
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
@@ -206,4 +195,4 @@ const config: Config = {
   // watchman: true,
 };
 
-export default config;
+module.exports = config;
